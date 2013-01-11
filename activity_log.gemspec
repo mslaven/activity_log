@@ -7,13 +7,16 @@ Gem::Specification.new do |gem|
   gem.name          = "activity_log"
   gem.version       = ActivityLog::VERSION
   gem.authors       = ["Mike"]
-  gem.email         = ["michael.slaven@otherocean.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["mslaven@gmail.com"]
+  gem.description   = %q{Provides a simple activity logging and retrieval facility}
+  gem.summary       = %q{Simple Activity Logging Facility}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+
+  gem.add_runtime_dependency(%q<rails>, [">= 3.2.0"])
 end
