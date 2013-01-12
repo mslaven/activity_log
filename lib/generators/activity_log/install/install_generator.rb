@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# Copyright (c) 2012 David Kiger
+# Copyright (c) 2012 Mike Slaven
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -23,7 +23,7 @@
 
 require 'rails/generators/migration'
 
-module RestfulApiAuthentication
+module ActivityLog
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
       include Rails::Generators::Migration
@@ -40,11 +40,11 @@ module RestfulApiAuthentication
       end
       
       def copy_migrations
-        migration_template "create_activity_log.rb", "db/migrate/create_activity_log.rb"
+        migration_template "create_activity_log_entry.rb", "db/migrate/create_activity_log_entry.rb"
       end
       
       def copy_the_activity_log_model
-        copy_file "activity_log.rb", "app/models/activity_log.rb"
+        copy_file "activity_log_entry.rb", "app/models/activity_log_entry.rb"
       end
       
     end
