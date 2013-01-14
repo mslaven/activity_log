@@ -5,4 +5,11 @@ class ActivityLogEntry < ActiveRecord::Base
   
   attr_accessible :uid, :data
 
+  before_save :set_defaults
+
+  def set_defaults
+  	self.uid = 0 unless self.uid
+  	self.data = "" unless self.data
+  end
+
 end
