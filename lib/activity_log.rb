@@ -4,7 +4,7 @@ module ActivityLog
 
   def self.log(owner_id, data)
     log_entry = ActivityLogEntry.new
-    log_entry.owner_id = owner_id unless owner_id.nil?
+    log_entry.uid = owner_id unless owner_id.nil?
     log_entry.data = data unless data.nil?
 
     return log_entry.save
