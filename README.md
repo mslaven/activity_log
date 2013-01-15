@@ -34,18 +34,24 @@ class MyController < ApplicationController
 
 and use the following methods to add and retrieve activity log entries:
 Create a new entry:
-		ActivityLog.log(owner_id, "user logged in")
+```ruby
+ActivityLog.log(owner_id, "user logged in")
+```
 
-Retrieve u single entry:
-		@entry = ActivityLog.get_by_id(activity_log_entry_id)
+Retrieve a single entry
+```ruby
+@entry = ActivityLog.get_by_id(activity_log_entry_id)
+```
 
-Retrieve all entries for a unique id:
-		@entries = ActivityLog.get_by_owner(owner_id)
+Retrieve all entries for a unique id
+```ruby
+@entries = ActivityLog.get_by_owner(owner_id)
+```
 
-
-Retrieve all entries for a unique id within a specific timeframe:
-		@entries = ActivityLog.get_by_owner_and_range(owner_id, start_date, end_date)
-
+Retrieve all entries for a unique id within a specific timeframe
+```ruby
+@entries = ActivityLog.get_by_owner_and_range(owner_id, start_date, end_date)
+```
 
 ## Contributing
 
