@@ -17,11 +17,11 @@ Or install it yourself as:
     $ gem install activity_log
 
 Once you have the gem installed, execute:
-		$ rails g activity_log:install
+    $ rails g activity_log:install
 
 followed by
 
-		$ rake db:migrate
+    $ rake db:migrate
 
 This will create the activity_log_entry model and migration as well as creating the new table in the database.
 
