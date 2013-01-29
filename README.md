@@ -16,7 +16,8 @@ Or install it yourself as:
 
     $ gem install activity_log
 
-Once you have the gem installed, execute:
+Once you have the gem installed execute:
+
     $ rails g activity_log:install
 
 followed by
@@ -29,8 +30,10 @@ This will create the activity_log_entry model and migration as well as creating 
 
 Once installed you can then add new activity log entries with by first including the actvity_log library via:
 
+```ruby
 class MyController < ApplicationController
   include ActivityLog
+```
 
 and use the following methods to add and retrieve activity log entries:
 Create a new entry:
